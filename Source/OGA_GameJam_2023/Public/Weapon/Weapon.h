@@ -25,6 +25,8 @@ public:
 	AWeapon();
 	virtual void Tick(float DeltaTime) override;
 
+	void Fire();
+
 protected:
 	virtual void BeginPlay() override;
 
@@ -55,6 +57,10 @@ private:
 	UPROPERTY(VisibleAnywhere, Category = "Weapon Properties")
 		EWeaponState WeaponState;
 
+	UPROPERTY(EditAnywhere, Category = "Weapon Properties")
+		class UAnimationAsset* FireAnimation;
+
 public:
 	FORCEINLINE void SetWeaponState(EWeaponState State) { WeaponState = State; }
+	FORCEINLINE USkeletalMeshComponent* GetWeaponMesh() const { return WeaponMesh; }
 	};

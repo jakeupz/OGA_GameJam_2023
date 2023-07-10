@@ -4,6 +4,8 @@
 #include "Weapon/Weapon.h"
 #include "Components/SphereComponent.h"
 #include "Character/PlayerCharacter.h"
+#include "Animation/AnimationAsset.h"
+#include "Components/SkeletalMeshComponent.h"
 
 // Sets default values
 AWeapon::AWeapon()
@@ -57,5 +59,13 @@ void AWeapon::OnSphereEndOverlap(UPrimitiveComponent* OverlappedComponent, AActo
 	if (PlayerCharacter)
 	{
 		PlayerCharacter->SetOverlappingWeapon(nullptr);
+	}
+}
+
+void AWeapon::Fire()
+{
+	if (FireAnimation)
+	{
+		WeaponMesh->PlayAnimation(FireAnimation, false);
 	}
 }
