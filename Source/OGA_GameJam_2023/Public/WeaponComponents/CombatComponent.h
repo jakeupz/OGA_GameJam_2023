@@ -6,6 +6,7 @@
 #include "Components/ActorComponent.h"
 #include "CombatComponent.generated.h"
 
+#define TRACE_LENGTH 80000.f
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
 class OGA_GAMEJAM_2023_API UCombatComponent : public UActorComponent
@@ -25,11 +26,19 @@ protected:
 
 	void FireButtonPressed(bool bPressed);
 
+	void TraceUnderCrosshairs(FHitResult& TraceHitResult);
+
 private:
 	class APlayerCharacter* Character;
 	AWeapon* EquippedWeapon;
 	bool bAiming;
 	
+	UPROPERTY(EditAnywhere)
+		float BaseWalkSpeed;
+
+	UPROPERTY(EditAnywhere)
+		float AimWalkSpeed;
+
 
 	bool bFireButtonPressed;
 };
