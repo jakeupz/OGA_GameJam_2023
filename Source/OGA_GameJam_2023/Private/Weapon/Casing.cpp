@@ -4,6 +4,7 @@
 #include "Weapon/Casing.h"
 #include "Kismet/GameplayStatics.h"
 #include "Sound/SoundCue.h"
+#include "GameFramework/Actor.h"
 
 // Sets default values
 ACasing::ACasing()
@@ -22,6 +23,7 @@ ACasing::ACasing()
 void ACasing::BeginPlay()
 {
 	Super::BeginPlay();
+
 	CasingMesh->OnComponentHit.AddDynamic(this, &ACasing::OnHit);
 	CasingMesh->AddImpulse(GetActorForwardVector() * ShellEjectionImpulse);
 }

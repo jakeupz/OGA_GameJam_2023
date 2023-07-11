@@ -29,6 +29,4 @@ private:
 
 	UPROPERTY(EditAnywhere)
 	class USoundCue* ShellSound;
-
-
 };
