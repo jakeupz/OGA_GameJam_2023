@@ -47,9 +47,6 @@ protected:
 	UPROPERTY(EditAnywhere, Category = Input)
 		TObjectPtr<UInputAction> AimAction;
 
-
-
-
 	UPROPERTY(EditAnywhere, Category = Input)
 		TObjectPtr<UInputAction> FireAction;
 
@@ -63,6 +60,11 @@ protected:
 
 	void FireButtonPressed();
 	void FireButtonReleased();
+	void PlayHitReactMontage();
+
+	UFUNCTION()
+	void ReceiveDamage(AActor* DamagedActor, float Damage, const UDamageType* DamageType, class AController* InstigatorController, AActor* DamageCauser);
+	void UpdateHUDHealth();
 
 private:
 	UPROPERTY(VisibleAnywhere, Category = Camera)
@@ -82,9 +84,23 @@ private:
 	FRotator StartingAimRotation;
 
 	UPROPERTY(EditAnywhere, Category = Combat)
-		class UAnimMontage* FireWeaponMontage;
+	class UAnimMontage* FireWeaponMontage;
 
+	// To do
+	UPROPERTY(EditAnywhere, Category = Combat)
+	class UAnimMontage* HitReactMontage;
 
+	/**
+	* Player health
+	*/
+
+	UPROPERTY(EditAnywhere, Category = "Player Stats")
+		float MaxHealth = 100.f;
+
+	UPROPERTY(VisibleAnywhere, Category = "Player Stats")
+		float Health = 100.f;
+
+	class APlayerCharacterController* PlayerCharacterController;
 
 public:
 	void SetOverlappingWeapon(AWeapon* Weapon);
