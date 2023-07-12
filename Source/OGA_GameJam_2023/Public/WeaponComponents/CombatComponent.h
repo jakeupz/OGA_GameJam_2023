@@ -28,8 +28,13 @@ protected:
 
 	void TraceUnderCrosshairs(FHitResult& TraceHitResult);
 
+	void SetHUDCrosshairs(float DeltaTime);
+
 private:
 	class APlayerCharacter* Character;
+	class APlayerCharacterController* Controller;
+	class APlayerHUD* HUD;
+
 	AWeapon* EquippedWeapon;
 	bool bAiming;
 	
