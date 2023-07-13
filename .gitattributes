@@ -1,0 +1,8 @@
+# Specify all files with specific extensions within the "Static" folder to be managed by Git LFS
+/Static/**/*.extension filter=lfs diff=lfs merge=lfs -text
+
+# Specify all files with specific extensions within the "Dynamic" folder to be managed by Git LFS
+/Dynamic/**/*.extension filter=lfs diff=lfs merge=lfs -text
+
+# Specify all files with specific extensions within the "Assets" folder to be managed by Git LFS
+/Assets/**/*.extension filter=lfs diff=lfs merge=lfs -text
