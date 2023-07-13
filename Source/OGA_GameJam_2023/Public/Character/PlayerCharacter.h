@@ -6,13 +6,14 @@
 #include "GameFramework/Character.h"
 #include "InputActionValue.h"
 #include "OGA_GameJam_2023/PlayerCharacterTypes/TurningInPlace.h"
+#include "Interfaces/InteractWithCrosshairsInterface.h"
 #include "PlayerCharacter.generated.h"
 
 class UInputMappingContext;
 class UInputAction;
 
 UCLASS()
-class OGA_GAMEJAM_2023_API APlayerCharacter : public ACharacter
+class OGA_GAMEJAM_2023_API APlayerCharacter : public ACharacter, public IInteractWithCrosshairsInterface
 {
 	GENERATED_BODY()
 
@@ -96,6 +97,7 @@ private:
 	UPROPERTY(EditAnywhere, Category = Combat)
 	class UAnimMontage* HitReactMontage;
 
+
 	/**
 	* Player health
 	*/
@@ -116,4 +118,14 @@ public:
 	FORCEINLINE float GetAO_Pitch() const { return AO_Pitch; }
 	AWeapon* GetEquippedWeapon();
 	FORCEINLINE ETurningInPlace GetTurningInPlace() const { return TurningInPlace; }
+	FVector GetHitTarget() const;
+	FORCEINLINE UCameraComponent* GetFollowCamera() const { return FollowCamera; }
+
+
+	UPROPERTY(EditAnywhere, Category = "Weapon Rotation Correction")
+		float RightHandRotationRoll;
+	UPROPERTY(EditAnywhere, Category = "Weapon Rotation Correction")
+		float RightHandRotationYaw;
+	UPROPERTY(EditAnywhere, Category = "Weapon Rotation Correction")
+		float RightHandRotationPitch;
 };
