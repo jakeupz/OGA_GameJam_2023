@@ -2641,3 +2641,4 @@ Execution of commandlet took:  0.34 seconds
 [2023.07.13-01.59.19:686][ 54]LogViewport: Scene viewport resized to 1163x874, mode Windowed.
 [2023.07.13-01.59.19:803][ 54]LogViewport: Scene viewport resized to 776x582, mode Windowed.
 [2023.07.13-01.59.20:336][ 54]LogViewport: Scene viewport resized to 1564x1254, mode Windowed.
+[2023.07.13-02.06.38:501][664]LogUObjectHash: Compacting FUObjectHashTables data took   0.37ms
