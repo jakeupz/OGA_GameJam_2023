@@ -4,6 +4,7 @@
 #include "Character/PlayerCharacter.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "Kismet/KismetMathLibrary.h"
+#include "Weapon/Weapon.h"
 
 void UPlayerAnimInstance::NativeInitializeAnimation()
 {
@@ -29,8 +30,10 @@ void UPlayerAnimInstance::NativeUpdateAnimation(float DeltaTime)
 	bIsInAir = PlayerCharacter->GetCharacterMovement()->IsFalling();
 	bIsAccelerating = PlayerCharacter->GetCharacterMovement()->GetCurrentAcceleration().Size() > 0.f ? true : false;
 	bWeaponEquipped = PlayerCharacter->IsWeaponEquipped();
+	EquippedWeapon = PlayerCharacter->GetEquippedWeapon();
 	bIsCrouched = PlayerCharacter->bIsCrouched;
 	bAiming = PlayerCharacter->IsAiming();
+	TurningInPlace = PlayerCharacter->GetTurningInPlace();
 
 	// Offset Yaw for Strafing
 	FRotator AimRotation = PlayerCharacter->GetBaseAimRotation();
@@ -44,4 +47,34 @@ void UPlayerAnimInstance::NativeUpdateAnimation(float DeltaTime)
 	const float Target = Delta.Yaw / DeltaTime;
 	const float Interp = FMath::FInterpTo(Lean, Target, DeltaTime, 6.f);
 	Lean = FMath::Clamp(Interp, -90.f, 90.f);
+
+	AO_Yaw = PlayerCharacter->GetAO_Yaw();
+	AO_Pitch = PlayerCharacter->GetAO_Pitch();
+
+	if (bWeaponEquipped && EquippedWeapon && EquippedWeapon->GetWeaponMesh() && PlayerCharacter->GetMesh())
+	{
+		LeftHandTransform = EquippedWeapon->GetWeaponMesh()->GetSocketTransform(FName("LeftHandSocket"), ERelativeTransformSpace::RTS_World);
+		FVector OutPosition;
+		FRotator OutRotation;
+		PlayerCharacter->GetMesh()->TransformToBoneSpace(FName("hand_r"), LeftHandTransform.GetLocation(), FRotator::ZeroRotator, OutPosition, OutRotation);
+		LeftHandTransform.SetLocation(OutPosition);
+		LeftHandTransform.SetRotation(FQuat(OutRotation));
+
+/* Checks if the gun matches where the character is pointing
+		FTransform MuzzleTipTransform = EquippedWeapon->GetWeaponMesh()->GetSocketTransform(FName("MuzzleFlash"), ERelativeTransformSpace::RTS_World);
+		FVector MuzzleX(FRotationMatrix(MuzzleTipTransform.GetRotation().Rotator()).GetUnitAxis(EAxis::X));
+		DrawDebugLine(GetWorld(), MuzzleTipTransform.GetLocation(), MuzzleTipTransform.GetLocation() + MuzzleX * 1000.f, FColor::Red);
+		DrawDebugLine(GetWorld(), MuzzleTipTransform.GetLocation(), PlayerCharacter->GetHitTarget(), FColor::Orange);
+	*/
+		FTransform RightHandTransform = PlayerCharacter->GetMesh()->GetSocketTransform(FName("Hand_R"), ERelativeTransformSpace::RTS_World);
+		RightHandRotation = UKismetMathLibrary::FindLookAtRotation(RightHandTransform.GetLocation(), RightHandTransform.GetLocation() + (RightHandTransform.GetLocation() - PlayerCharacter->GetHitTarget()));
+
+		FRotator LookAtRotation = UKismetMathLibrary::FindLookAtRotation(RightHandTransform.GetLocation(), RightHandTransform.GetLocation() + (RightHandTransform.GetLocation() - PlayerCharacter->GetHitTarget()));
+
+		LookAtRotation.Roll += PlayerCharacter->RightHandRotationRoll;
+		LookAtRotation.Yaw += PlayerCharacter->RightHandRotationYaw;
+		LookAtRotation.Pitch += PlayerCharacter->RightHandRotationPitch;
+
+		RightHandRotation = FMath::RInterpTo(RightHandRotation, LookAtRotation, DeltaTime, 30.f);
+	}
 }
