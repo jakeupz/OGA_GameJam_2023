@@ -66,7 +66,7 @@ protected:
 	void PlayHitReactMontage();
 
 	UFUNCTION()
-	void ReceiveDamage(AActor* DamagedActor, float Damage, const UDamageType* DamageType, class AController* InstigatorController, AActor* DamageCauser);
+		void ReceiveDamage(AActor* DamagedActor, float Damage, const UDamageType* DamageType, class AController* InstigatorController, AActor* DamageCauser);
 	void UpdateHUDHealth();
 
 private:
@@ -91,11 +91,12 @@ private:
 	void TurnInPlace(float DeltaTime);
 
 	UPROPERTY(EditAnywhere, Category = Combat)
-	class UAnimMontage* FireWeaponMontage;
+		class UAnimMontage* FireWeaponMontage;
 
 	// To do
 	UPROPERTY(EditAnywhere, Category = Combat)
-	class UAnimMontage* HitReactMontage;
+		class UAnimMontage* HitReactMontage;
+
 
 
 	/**
@@ -121,11 +122,18 @@ public:
 	FVector GetHitTarget() const;
 	FORCEINLINE UCameraComponent* GetFollowCamera() const { return FollowCamera; }
 
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 	UPROPERTY(EditAnywhere, Category = "Weapon Rotation Correction")
 		float RightHandRotationRoll;
 	UPROPERTY(EditAnywhere, Category = "Weapon Rotation Correction")
 		float RightHandRotationYaw;
 	UPROPERTY(EditAnywhere, Category = "Weapon Rotation Correction")
 		float RightHandRotationPitch;
+<<<<<<< Updated upstream
 };
+=======
+};
+>>>>>>> Stashed changes

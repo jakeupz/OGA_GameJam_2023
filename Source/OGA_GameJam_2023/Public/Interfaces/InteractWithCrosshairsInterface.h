@@ -14,12 +14,22 @@ class UInteractWithCrosshairsInterface : public UInterface
 };
 
 /**
+<<<<<<< Updated upstream
  * 
+=======
+ *
+>>>>>>> Stashed changes
  */
 class OGA_GAMEJAM_2023_API IInteractWithCrosshairsInterface
 {
 	GENERATED_BODY()
 
+<<<<<<< Updated upstream
 	// Add interface functions to this class. This is the class that will be inherited to implement this interface.
 public:
 };
+=======
+		// Add interface functions to this class. This is the class that will be inherited to implement this interface.
+public:
+};
+>>>>>>> Stashed changes

@@ -7,14 +7,14 @@
 #include "Weapon.generated.h"
 
 UENUM(BlueprintType)
-	enum class EWeaponState : uint8
-	{
-		EWS_Initial UMETA(DisplayName = "Initial State"),
-		EWS_Equipped UMETA(DisplayName = "Equipped"),
-		EWS_Dropped UMETA(DisplayName = "Dropped"),
+enum class EWeaponState : uint8
+{
+	EWS_Initial UMETA(DisplayName = "Initial State"),
+	EWS_Equipped UMETA(DisplayName = "Equipped"),
+	EWS_Dropped UMETA(DisplayName = "Dropped"),
 
-		EWS_MAX UMETA(DisplayName = "DefaultMAX")
-	};
+	EWS_MAX UMETA(DisplayName = "DefaultMAX")
+};
 
 UCLASS()
 class OGA_GAMEJAM_2023_API AWeapon : public AActor
@@ -91,11 +91,15 @@ private:
 		class UAnimationAsset* FireAnimation;
 
 	UPROPERTY(EditAnywhere)
-	TSubclassOf<class ACasing> CasingClass;
+		TSubclassOf<class ACasing> CasingClass;
 
 public:
 	FORCEINLINE void SetWeaponState(EWeaponState State) { WeaponState = State; }
 	FORCEINLINE USkeletalMeshComponent* GetWeaponMesh() const { return WeaponMesh; }
 	FORCEINLINE float GetZoomedFOV() const { return ZoomedFOV; }
 	FORCEINLINE float GetZoomInterpSpeed() const { return ZoomInterpSpeed; }
+<<<<<<< Updated upstream
 	};
+=======
+};
+>>>>>>> Stashed changes

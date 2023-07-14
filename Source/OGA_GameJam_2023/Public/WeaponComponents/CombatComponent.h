@@ -9,12 +9,12 @@
 
 #define TRACE_LENGTH 80000.f
 
-UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
+UCLASS(ClassGroup = (Custom), meta = (BlueprintSpawnableComponent))
 class OGA_GAMEJAM_2023_API UCombatComponent : public UActorComponent
 {
 	GENERATED_BODY()
 
-public:	
+public:
 	UCombatComponent();
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 	friend class APlayerCharacter;
@@ -38,7 +38,7 @@ private:
 
 	AWeapon* EquippedWeapon;
 	bool bAiming;
-	
+
 	UPROPERTY(EditAnywhere)
 		float BaseWalkSpeed;
 
@@ -76,4 +76,8 @@ private:
 		float ZoomInterpSpeed = 20.f;
 
 	void InterpFOV(float DeltaTime);
+<<<<<<< Updated upstream
 };
+=======
+};
+>>>>>>> Stashed changes
