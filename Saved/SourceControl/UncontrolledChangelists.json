@@ -5,7 +5,9 @@
 			"guid": "00000000000000000000000000000000",
 			"description": "Default Uncontrolled Changelist",
 			"files": [
+				"E:/Github Project/OGA_GameJam_2023/Content/Blueprints/Characters/BP_PlayerCharacter.uasset",
 				"E:/Github Project/OGA_GameJam_2023/Content/Blueprints/Characters/Animations/ABP_PlayerCharacter.uasset",
+<<<<<<< Updated upstream
 				"E:/Github Project/OGA_GameJam_2023/Content/Blueprints/Characters/Animations/Unequipped_CrouchIdleWalkRun.uasset",
 				"E:/Github Project/OGA_GameJam_2023/Content/Assets/Miximo/PlayerCharacter/Animations/Crouch_Walk_Left.uasset",
 				"E:/Github Project/OGA_GameJam_2023/Content/Assets/Miximo/PlayerCharacter/Animations/Crouch_Walk_Right.uasset",
@@ -82,6 +84,9 @@
 				"E:/Github Project/OGA_GameJam_2023/Content/Assets/Miximo/PlayerCharacter/Jog_Fwd_45_Lt.uasset",
 				"E:/Github Project/OGA_GameJam_2023/Content/Assets/Miximo/PlayerCharacter/Jog_Bwd_45_Rt.uasset",
 				"E:/Github Project/OGA_GameJam_2023/Content/Assets/Miximo/PlayerCharacter/Animations/Crouch_Walk_ForwardFix.uasset"
+=======
+				"E:/Github Project/OGA_GameJam_2023/Content/Assets/Miximo/PlayerCharacter/SK_PlayerCharacter.uasset"
+>>>>>>> Stashed changes
 			]
 		}
 	]

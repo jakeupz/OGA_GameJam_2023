@@ -1,9 +1,9 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
+#include "WeaponComponents/CombatComponent.h"
 #include "Weapon/Weapon.h"
 #include "Character/PlayerCharacter.h"
 #include "Engine/SkeletalMeshSocket.h"
-#include "WeaponComponents/CombatComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "WeaponComponents/CombatComponent.h"
 #include "Kismet/GameplayStatics.h"
@@ -193,6 +193,10 @@ void UCombatComponent::TraceUnderCrosshairs(FHitResult& TraceHitResult)
 			End,
 			ECollisionChannel::ECC_Visibility
 		);
+<<<<<<< Updated upstream
+=======
+		if (!TraceHitResult.bBlockingHit) TraceHitResult.ImpactPoint = End;
+>>>>>>> Stashed changes
 		if (TraceHitResult.GetActor() && TraceHitResult.GetActor()->Implements<UInteractWithCrosshairsInterface>())
 		{
 			HUDPackage.CrosshairsColor = FLinearColor::Red;

@@ -63,7 +63,7 @@ void APlayerCharacter::Tick(float DeltaTime)
 	AimOffset(DeltaTime);
 }
 
-void APlayerCharacter::SetupPlayerInputComponent(UInputComponent * PlayerInputComponent)
+void APlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 
@@ -127,7 +127,7 @@ void APlayerCharacter::ReceiveDamage(AActor* DamagedActor, float Damage, const U
 	PlayHitReactMontage();
 }
 
-void APlayerCharacter::Move(const FInputActionValue & Value)
+void APlayerCharacter::Move(const FInputActionValue& Value)
 {
 	if (Controller != nullptr)
 	{
@@ -143,7 +143,7 @@ void APlayerCharacter::Move(const FInputActionValue & Value)
 	}
 }
 
-void APlayerCharacter::Look(const FInputActionValue & Value)
+void APlayerCharacter::Look(const FInputActionValue& Value)
 {
 	const FVector2D LookAxisVector = Value.Get<FVector2D>();
 	if (Controller != nullptr)
@@ -312,4 +312,3 @@ void APlayerCharacter::FireButtonReleased()
 		Combat->FireButtonPressed(false);
 	}
 }
-

@@ -8,7 +8,7 @@
 #include "PlayerAnimInstance.generated.h"
 
 /**
- * 
+ *
  */
 UCLASS()
 class OGA_GAMEJAM_2023_API UPlayerAnimInstance : public UAnimInstance
@@ -29,8 +29,8 @@ private:
 		bool bIsInAir;
 
 	UPROPERTY(BlueprintReadOnly, Category = Movement, meta = (AllowPrivateAccess = "true"))
-		bool bIsAccelerating;	
-	
+		bool bIsAccelerating;
+
 	UPROPERTY(BlueprintReadOnly, Category = Movement, meta = (AllowPrivateAccess = "true"))
 		bool bWeaponEquipped;
 
@@ -67,4 +67,8 @@ private:
 	UPROPERTY(BlueprintReadOnly, Category = Movement, meta = (AllowPrivateAccess = "true"))
 		FRotator RightHandRotation;
 
+<<<<<<< Updated upstream
 };
+=======
+};
+>>>>>>> Stashed changes

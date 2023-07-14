@@ -21,28 +21,29 @@ public:
 };
 
 /**
- * 
+ *
  */
 UCLASS()
 class OGA_GAMEJAM_2023_API APlayerHUD : public AHUD
 {
 	GENERATED_BODY()
-	public:
-		virtual void DrawHUD() override;
+public:
+	virtual void DrawHUD() override;
 
 
-		UPROPERTY(EditAnywhere, Category = "Player Stats")
+	UPROPERTY(EditAnywhere, Category = "Player Stats")
 		TSubclassOf<class UUserWidget> CharacterOverlayClass;
 
-		class UCharacterOverlay* CharacterOverlay;
+	class UCharacterOverlay* CharacterOverlay;
 
 protected:
-		virtual void BeginPlay() override;
-		void AddCharacterOverlay();
+	virtual void BeginPlay() override;
+	void AddCharacterOverlay();
 
-	private:
-		FHUDPackage HUDPackage;
+private:
+	FHUDPackage HUDPackage;
 
+<<<<<<< Updated upstream
 		void DrawCrosshair(UTexture2D* Texture, FVector2D ViewportCenter, FVector2D Spread, FLinearColor CrosshairColor);
 
 		UPROPERTY(EditAnywhere)
@@ -51,3 +52,13 @@ protected:
 	public:
 		FORCEINLINE void SetHUDPackage(const FHUDPackage& Package) { HUDPackage = Package; }
 };
+=======
+	void DrawCrosshair(UTexture2D* Texture, FVector2D ViewportCenter, FVector2D Spread, FLinearColor CrosshairColor);
+
+	UPROPERTY(EditAnywhere)
+		float CrosshairSpreadMax = 16.f;
+
+public:
+	FORCEINLINE void SetHUDPackage(const FHUDPackage& Package) { HUDPackage = Package; }
+};
+>>>>>>> Stashed changes
