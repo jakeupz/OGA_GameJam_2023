@@ -4,6 +4,7 @@
 .Saved/
 .Content/Developers/
 .Content/Collections/
+.Intermediate/
 # Compiled Object files
 *.slo
 *.lo
