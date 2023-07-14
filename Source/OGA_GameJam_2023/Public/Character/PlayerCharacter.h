@@ -98,7 +98,6 @@ private:
 		class UAnimMontage* HitReactMontage;
 
 
-
 	/**
 	* Player health
 	*/
@@ -122,18 +121,10 @@ public:
 	FVector GetHitTarget() const;
 	FORCEINLINE UCameraComponent* GetFollowCamera() const { return FollowCamera; }
 
-<<<<<<< Updated upstream
-
-=======
->>>>>>> Stashed changes
 	UPROPERTY(EditAnywhere, Category = "Weapon Rotation Correction")
-		float RightHandRotationRoll;
+		float RightHandRotationRoll = 90.f;
 	UPROPERTY(EditAnywhere, Category = "Weapon Rotation Correction")
-		float RightHandRotationYaw;
+		float RightHandRotationYaw = 2.f;
 	UPROPERTY(EditAnywhere, Category = "Weapon Rotation Correction")
-		float RightHandRotationPitch;
-<<<<<<< Updated upstream
+		float RightHandRotationPitch = 95.f;
 };
-=======
-};
->>>>>>> Stashed changes

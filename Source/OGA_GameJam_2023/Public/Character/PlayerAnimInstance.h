@@ -67,8 +67,4 @@ private:
 	UPROPERTY(BlueprintReadOnly, Category = Movement, meta = (AllowPrivateAccess = "true"))
 		FRotator RightHandRotation;
 
-<<<<<<< Updated upstream
 };
-=======
-};
->>>>>>> Stashed changes
