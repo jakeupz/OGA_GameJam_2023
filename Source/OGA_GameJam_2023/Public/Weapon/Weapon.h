@@ -25,37 +25,6 @@ public:
 	AWeapon();
 	virtual void Tick(float DeltaTime) override;
 
-	virtual void Fire(const FVector& HitTarget);
-
-	/**
-	* Textures for the weapon crosshairs
-	*/
-
-	UPROPERTY(EditAnywhere, Category = Crosshairs)
-		class UTexture2D* CrosshairsCenter;
-
-	UPROPERTY(EditAnywhere, Category = Crosshairs)
-		UTexture2D* CrosshairsLeft;
-
-	UPROPERTY(EditAnywhere, Category = Crosshairs)
-		UTexture2D* CrosshairsRight;
-
-	UPROPERTY(EditAnywhere, Category = Crosshairs)
-		UTexture2D* CrosshairsTop;
-
-	UPROPERTY(EditAnywhere, Category = Crosshairs)
-		UTexture2D* CrosshairsBottom;
-
-	/**
-	* Zoomed FOV while aiming
-	*/
-
-	UPROPERTY(EditAnywhere)
-		float ZoomedFOV = 30.f;
-
-	UPROPERTY(EditAnywhere)
-		float ZoomInterpSpeed = 20.f;
-
 protected:
 	virtual void BeginPlay() override;
 
@@ -76,7 +45,6 @@ protected:
 			int32 OtherBodyIndex
 		);
 
-
 private:
 	UPROPERTY(VisibleAnywhere, Category = "Weapon Properties")
 		USkeletalMeshComponent* WeaponMesh;
@@ -87,15 +55,6 @@ private:
 	UPROPERTY(VisibleAnywhere, Category = "Weapon Properties")
 		EWeaponState WeaponState;
 
-	UPROPERTY(EditAnywhere, Category = "Weapon Properties")
-		class UAnimationAsset* FireAnimation;
-
-	UPROPERTY(EditAnywhere)
-	TSubclassOf<class ACasing> CasingClass;
-
 public:
 	FORCEINLINE void SetWeaponState(EWeaponState State) { WeaponState = State; }
-	FORCEINLINE USkeletalMeshComponent* GetWeaponMesh() const { return WeaponMesh; }
-	FORCEINLINE float GetZoomedFOV() const { return ZoomedFOV; }
-	FORCEINLINE float GetZoomInterpSpeed() const { return ZoomInterpSpeed; }
 	};
