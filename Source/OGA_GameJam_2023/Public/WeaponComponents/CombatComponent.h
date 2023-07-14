@@ -76,8 +76,4 @@ private:
 		float ZoomInterpSpeed = 20.f;
 
 	void InterpFOV(float DeltaTime);
-<<<<<<< Updated upstream
 };
-=======
-};
->>>>>>> Stashed changes
