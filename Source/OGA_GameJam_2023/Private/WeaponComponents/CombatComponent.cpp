@@ -5,7 +5,7 @@
 #include "Character/PlayerCharacter.h"
 #include "Engine/SkeletalMeshSocket.h"
 #include "GameFramework/CharacterMovementComponent.h"
-#include "WeaponComponents/CombatComponent.h"
+
 
 UCombatComponent::UCombatComponent()
 {
