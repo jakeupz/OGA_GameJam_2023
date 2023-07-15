@@ -1,11 +1,11 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
+#include "WeaponComponents/CombatComponent.h"
 #include "Weapon/Weapon.h"
 #include "Character/PlayerCharacter.h"
 #include "Engine/SkeletalMeshSocket.h"
-#include "WeaponComponents/CombatComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
-#include "WeaponComponents/CombatComponent.h"
+
 
 UCombatComponent::UCombatComponent()
 {
