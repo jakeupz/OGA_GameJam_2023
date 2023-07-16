@@ -25,7 +25,7 @@ public:
 	virtual void PostInitializeComponents() override;
 
 	void PlayFireMontage(bool bAiming);
-
+	void PlayHitReactMontage();
 protected:
 	virtual void BeginPlay() override;
 	UPROPERTY(EditAnywhere, Category = Input)
@@ -63,7 +63,6 @@ protected:
 
 	void FireButtonPressed();
 	void FireButtonReleased();
-	void PlayHitReactMontage();
 
 	UFUNCTION()
 		void ReceiveDamage(AActor* DamagedActor, float Damage, const UDamageType* DamageType, class AController* InstigatorController, AActor* DamageCauser);
@@ -93,7 +92,11 @@ private:
 	UPROPERTY(EditAnywhere, Category = Combat)
 		class UAnimMontage* FireWeaponMontage;
 
-	// To do
+	void HideCameraIfCharacterClose();
+
+	UPROPERTY(EditAnywhere)
+		float CameraThreshold = 200.f;
+
 	UPROPERTY(EditAnywhere, Category = Combat)
 		class UAnimMontage* HitReactMontage;
 
