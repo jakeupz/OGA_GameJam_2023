@@ -11,6 +11,7 @@ Binaries/
 Build/
 DerivedDataCache/
 Intermediate/
+Saved/*
 Saved/
 .vs/
 .vscode/

@@ -10,67 +10,33 @@
     <list default="true" id="cd288598-b189-4095-81d7-cc78c7633731" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.OGA_GameJam_2023/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OGA_GameJam_2023/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/CachedAssetRegistry.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intermediate/Config/CoalescedSourceConfigs/Crypto.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intermediate/Config/CoalescedSourceConfigs/GameUserSettings.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intermediate/Config/CoalescedSourceConfigs/InternationalizationExport.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intermediate/Config/CoalescedSourceConfigs/LocalizationServiceSettings.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intermediate/Config/CoalescedSourceConfigs/ObjectMixer.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intermediate/Config/CoalescedSourceConfigs/ObjectMixerSerializedData.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intermediate/Config/CoalescedSourceConfigs/TranslationPickerSettings.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intermediate/Config/CoalescedSourceConfigs/UnrealInsightsSettings.ini" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/ReimportCache/3688439234.bin" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/ShaderAutogen/PCD3D_ES3_1/AutogenShaderHeaders.ush" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/ShaderAutogen/PCD3D_SM5/AutogenShaderHeaders.ush" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Intermediate/ShaderAutogen/PCD3D_SM6/AutogenShaderHeaders.ush" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Saved/AutoScreenshot.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Saved/Autosaves/Game/FPWeapon/Mesh/SK_FPGun_Auto1.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Autosaves/Game/FirstPerson/Blueprints/BP_Pickup_Rifle_Auto1.uasset" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Saved/Autosaves/Game/LevelPrototyping/Materials/MI_PrototypeGrid_Gray_02_Auto1.uasset" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Saved/Autosaves/Game/LevelPrototyping/Materials/M_PrototypeGrid_Auto1.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Autosaves/Game/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/5/8C/EAHCBN229IT8APJO305AH5_Auto1.uasset" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Saved/Autosaves/Game/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/8/3M/4ATOKH0ZGPCVBS85MPKAXK_Auto1.uasset" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Saved/Autosaves/Game/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/8/3M/4ATOKH0ZGPCVBS85MPKAXK_Auto2.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Autosaves/Game/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/B/YQ/KT6JL4FVCNJJ9VFOCSF32J_Auto1.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Autosaves/PackageRestoreData.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Config/CrashReportClient/UECC-Windows-6D55D22149B975FCB02B65B35B748A5D/CrashReportClient.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Config/CrashReportClient/UECC-Windows-7F3DC4EC4CEC6EB6E33ADDB0A0DEB45E/CrashReportClient.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Config/CrashReportClient/UECC-Windows-D52837094E06B42D946721B4C7B88E3E/CrashReportClient.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Config/CrashReportClient/UECC-Windows-F544272D4691B4E0A9416DA33A27B282/CrashReportClient.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Config/WindowsEditor/Editor.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/WindowsEditor/Editor.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/CrashReportClient/UECC-Windows-1071A6E344FB0017CF2DD78092031025/CrashReportClient.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/CrashReportClient/UECC-Windows-295D3C3D4A832298E70AF1AF562649F7/CrashReportClient.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/CrashReportClient/UECC-Windows-B7118A334760D2334FF0A98FFF29E862/CrashReportClient.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/CrashReportClient/UECC-Windows-DFC383A74E082D357AF5698CBE0FB43A/CrashReportClient.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/CrashReportClient/UECC-Windows-EF34F0A943049E6EABF52EA377749994/CrashReportClient.ini" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Saved/Config/WindowsEditor/EditorPerProjectUserSettings.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/WindowsEditor/EditorPerProjectUserSettings.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Saved/Config/WindowsEditor/Engine.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/WindowsEditor/Engine.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Config/WindowsEditor/GameUserSettings.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/WindowsEditor/GameUserSettings.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Config/WindowsEditor/Niagara.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/WindowsEditor/Niagara.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Config/WindowsEditor/ObjectMixerSerializedData.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Config/WindowsEditor/SourceControlSettings.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Config/WorldState/361814018.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Config/WorldState/4215843162.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Config/WorldState/509037242.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Logs/OGA_GameJam_2023-backup-2023.07.13-01.14.06.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Logs/OGA_GameJam_2023-backup-2023.07.13-04.15.46.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/Logs/OGA_GameJam_2023_2.log" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Logs/OGA_GameJam_2023_2.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/SourceControl/UncontrolledChangelists.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/WorldPartition/StreamingGeneration-HLOD-00000810-2023-07-12T20.45.32.943Z.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/WorldPartition/StreamingGeneration-PIE-00000a98-2023-07-13T18.55.11.664Z.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/WorldPartition/StreamingGeneration-PIE-00005424-2023-07-05T19.06.48.018Z.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/WorldPartition/StreamingGeneration-PIE-0000902c-2023-07-05T19.30.24.396Z.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/WorldPartition/StreamingGeneration-PIE-0000902c-2023-07-05T19.34.52.200Z.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/WorldPartition/StreamingGeneration-PIE-0000902c-2023-07-05T19.35.07.462Z.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/WorldPartition/StreamingGeneration-PIE-0000902c-2023-07-05T19.35.20.903Z.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/WorldPartition/StreamingGeneration-PIE-0000902c-2023-07-05T19.35.38.233Z.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/WorldPartition/StreamingGeneration-PIE-00009188-2023-07-12T20.44.02.157Z.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/WorldPartition/StreamingGeneration-PIE-00009188-2023-07-12T20.45.36.886Z.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/WorldPartition/StreamingGeneration-PIE-0000b630-2023-07-01T15.03.06.524Z.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/WorldPartition/StreamingGeneration-PIE-0000b630-2023-07-01T15.07.55.453Z.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/WorldPartition/StreamingGeneration-PIE-0000b630-2023-07-01T15.10.26.387Z.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/WorldPartition/StreamingGeneration-PIE-0000b630-2023-07-01T15.10.45.338Z.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/WorldPartition/StreamingGeneration-PIE-0000b630-2023-07-01T15.35.25.784Z.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/WorldPartition/StreamingGeneration-PIE-0000b630-2023-07-01T15.35.54.564Z.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/WorldPartition/StreamingGeneration-PIE-0000b630-2023-07-01T15.37.10.245Z.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/WorldPartition/StreamingGeneration-PIE-0000b630-2023-07-01T15.41.44.401Z.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/WorldPartition/StreamingGeneration-PIE-0000b630-2023-07-01T15.41.51.569Z.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/OGA_GameJam_2023/Private/WeaponComponents/CombatComponent.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/OGA_GameJam_2023/Private/WeaponComponents/CombatComponent.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/OGA_GameJam_2023/Public/Weapon/ProjectileBullet.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/OGA_GameJam_2023/Public/Weapon/ProjectileBullet.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Logs/OGA_GameJam_2023-backup-2023.07.14-01.23.50.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Logs/OGA_GameJam_2023-backup-2023.07.14-04.29.47.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Logs/OGA_GameJam_2023.log" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Logs/OGA_GameJam_2023.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Logs/OGA_GameJam_2023_2.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Logs/UnrealVersionSelector-2023.07.13-20.22.35.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Logs/UnrealVersionSelector-2023.07.13-20.22.35.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Logs/UnrealVersionSelector-2023.07.13-23.42.02.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Logs/UnrealVersionSelector-2023.07.13-23.42.02.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/WorldPartition/StreamingGeneration-PIE-000062c8-2023-07-13T23.35.16.565Z.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/OGA_GameJam_2023/Private/Weapon/Projectile.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/OGA_GameJam_2023/Private/Weapon/Projectile.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,6 +45,9 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2SSVLWe5JeN1Khm3NplZ5XqHJze" />
   <component name="ProjectViewState">
@@ -95,6 +64,7 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "UnrealLinkOptionsId",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -173,6 +143,7 @@
       <updated>1689139919359</updated>
       <workItem from="1689139921298" duration="588000" />
       <workItem from="1689296805214" duration="2415000" />
+      <workItem from="1689538242925" duration="2491000" />
     </task>
     <servers />
   </component>
@@ -181,5 +152,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
