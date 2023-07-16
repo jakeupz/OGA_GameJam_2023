@@ -5,7 +5,21 @@
 			"guid": "00000000000000000000000000000000",
 			"description": "Default Uncontrolled Changelist",
 			"files": [
-				"E:/Github Project/OGA_GameJam_2023/Content/Blueprints/Characters/BP_PlayerCharacter.uasset"
+				"E:/Github Project/OGA_GameJam_2023/Content/Blueprints/Characters/BP_PlayerCharacter.uasset",
+				"E:/Github Project/OGA_GameJam_2023/Content/__ExternalActors__/Maps/FirstPersonMap/7/MJ/T6E1CIHFSHFNDC28C7S0NG.uasset",
+				"E:/Github Project/OGA_GameJam_2023/Content/Assets/Animations/ReTargetedAnims/AnimStarterPackMixamo/Hit_React_1.uasset",
+				"E:/Github Project/OGA_GameJam_2023/Content/Assets/Animations/ReTargetedAnims/AnimStarterPackMixamo/Hit_React_1_Add.uasset",
+				"E:/Github Project/OGA_GameJam_2023/Content/Assets/Animations/ReTargetedAnims/AnimStarterPackMixamo/Hit_React_2_Add.uasset",
+				"E:/Github Project/OGA_GameJam_2023/Content/Assets/Animations/ReTargetedAnims/AnimStarterPackMixamo/Hit_React_3_Add.uasset",
+				"E:/Github Project/OGA_GameJam_2023/Content/Assets/Animations/ReTargetedAnims/AnimStarterPackMixamo/Hit_React_4_Add.uasset",
+				"E:/Github Project/OGA_GameJam_2023/Content/Blueprints/Characters/Animations/HitReact.uasset",
+				"E:/Github Project/OGA_GameJam_2023/Content/Blueprints/Characters/Animations/ABP_PlayerCharacter.uasset",
+				"E:/Github Project/OGA_GameJam_2023/Content/Assets/Miximo/PlayerCharacter/SK_PlayerCharacter.uasset",
+				"E:/Github Project/OGA_GameJam_2023/Content/Input/Actions/IA_Crouch.uasset",
+				"E:/Github Project/OGA_GameJam_2023/Content/Blueprints/Enemy/BP_Turret.uasset",
+				"E:/Github Project/OGA_GameJam_2023/Content/__ExternalActors__/Maps/FirstPersonMap/D/G4/H1TB9O3N704KUXXJBKDK9I.uasset",
+				"E:/Github Project/OGA_GameJam_2023/Content/Input/Actions/IA_Fire.uasset",
+				"E:/Github Project/OGA_GameJam_2023/Content/Blueprints/Weapon/Projectiles/BP_TurretBullet.uasset"
 			]
 		}
 	]

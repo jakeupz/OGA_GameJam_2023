@@ -73,6 +73,27 @@ Saved/*
 Intermediate/*
 Plugins/*/Intermediate/*
 
+# Unreal Engine 5
+Binaries/
+Build/
+DerivedDataCache/
+Intermediate/
+Saved/
+.vs/
+.vscode/
+*.uprojectdirs
+*.sln
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+*.iproj
+*.xcworkspace
+*.xcuserstate
+
+# JetBrains Rider
+.idea/
+.rider/
+
 # Cache files for the editor to use
 DerivedDataCache/*
 Content/MilitaryWeapSilver/Weapons/Grenade_Launcher_A.uasset

@@ -27,6 +27,8 @@ protected:
 
 	void FireButtonPressed(bool bPressed);
 
+	void Fire();
+
 	void TraceUnderCrosshairs(FHitResult& TraceHitResult);
 
 	void SetHUDCrosshairs(float DeltaTime);
@@ -76,4 +78,16 @@ private:
 		float ZoomInterpSpeed = 20.f;
 
 	void InterpFOV(float DeltaTime);
+
+	/**
+	* Automatic fire
+	*/
+
+	FTimerHandle FireTimer;
+
+	UPROPERTY(EditAnywhere, Category = Combat)
+	bool bCanFire = true;
+
+	void StartFireTimer();
+	void FireTimerFinished();
 };
