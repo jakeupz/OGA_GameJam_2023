@@ -1,5 +1,32 @@
 # Visual Studio 2015 user specific files
 .vs/
+.vsconfig
+.xml
+.Content/Developers/
+.Content/Collections/
+
+
+# Unreal Engine 5
+Binaries/
+Build/
+DerivedDataCache/
+Intermediate/
+Saved/*
+Saved/
+.vs/
+.vscode/
+*.uprojectdirs
+*.sln
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+*.iproj
+*.xcworkspace
+*.xcuserstate
+
+# JetBrains Rider
+.idea/
+.rider/
 
 # Compiled Object files
 *.slo
