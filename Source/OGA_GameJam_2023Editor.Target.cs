@@ -9,7 +9,8 @@ public class OGA_GameJam_2023EditorTarget : TargetRules
 	{
 		Type = TargetType.Editor;
 		DefaultBuildSettings = BuildSettingsVersion.V2;
+        
 
-		ExtraModuleNames.AddRange( new string[] { "OGA_GameJam_2023" } );
+        ExtraModuleNames.AddRange( new string[] { "OGA_GameJam_2023" } );
 	}
 }
