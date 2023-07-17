@@ -9,6 +9,9 @@
 #include "Particles/ParticleSystem.h"
 #include "Sound/SoundCue.h"
 #include "Character/PlayerCharacter.h"
+#include "Components/PrimitiveComponent.h"
+#include "GameFramework/Actor.h"
+
 
 AProjectile::AProjectile()
 {
