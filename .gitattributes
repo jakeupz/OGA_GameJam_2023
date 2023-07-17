@@ -23,3 +23,13 @@ C:/Users/jacob/OneDrive/Documents/Unreal[[:space:]]Projects/OGA_GameJam_2023/Con
 C:/Users/jacob/OneDrive/Documents/Unreal[[:space:]]Projects/OGA_GameJam_2023/Content filter=lfs diff=lfs merge=lfs -text
 /Game/ filter=lfs diff=lfs merge=lfs -text
 /Game/**
+LogLinker:[[:space:]]Warning:[[:space:]][AssetLog][[:space:]]C:/Users/jacob/OneDrive/Documents/Unreal[[:space:]]Projects/OGA_GameJam_2023/Content/Assets/Weapons/AssaultRifle/FX/P_AssaultRifle_MuzzleFlash.uasset:[[:space:]]Failed[[:space:]]to[[:space:]]load[[:space:]]'/Game/MilitaryWeapSilver/FX/Materials/M_AssaultRifle_MuzzleFlash_4x1':[[:space:]]Can't[[:space:]]find[[:space:]]file. filter=lfs diff=lfs merge=lfs -text
+C:/Users/jacob/OneDrive/Documents/Unreal[[:space:]]Projects/OGA_GameJam_2023/Content/** filter=lfs diff=lfs merge=lfs -text
+C:/Users/jacob/OneDrive/Documents/Unreal[[:space:]]Projects/OGA_GameJam_2023/Content/* filter=lfs diff=lfs merge=lfs -text
+C:/Users/jacob/OneDrive/Documents/Unreal[[:space:]]Projects/OGA_GameJam_2023/Content" filter=lfs diff=lfs merge=lfs -text
+C:/Users/jacob/OneDrive/Documents/Unreal[[:space:]]Projects/OGA_GameJam_2023/Content/ filter=lfs diff=lfs merge=lfs -text
+C:/Users/jacob/OneDrive/Documents/Unreal filter=lfs diff=lfs merge=lfs -text
+C:/Users/jacob/OneDrive/Documents/Unreal filter=lfs diff=lfs merge=lfs -text
+C:/Users/jacob/OneDrive/Documents/Unreal filter=lfs diff=lfs merge=lfs -text
+C:/Users/jacob/OneDrive/Documents/Unreal filter=lfs diff=lfs merge=lfs -text
+/Content/* filter=lfs diff=lfs merge=lfs -text
