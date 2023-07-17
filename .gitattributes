@@ -21,3 +21,4 @@ C:/Users/jacob/OneDrive/Documents/Unreal[[:space:]]Projects/OGA_GameJam_2023/Con
 C:/Users/jacob/OneDrive/Documents/Unreal[[:space:]]Projects/OGA_GameJam_2023/Content/Blueprints/Characters/BP_PlayerCharacter1.uasset filter=lfs diff=lfs merge=lfs -text
 C:/Users/jacob/OneDrive/Documents/Unreal[[:space:]]Projects/OGA_GameJam_2023/Content/Blueprints/Characters/Animations filter=lfs diff=lfs merge=lfs -text
 C:/Users/jacob/OneDrive/Documents/Unreal[[:space:]]Projects/OGA_GameJam_2023/Content filter=lfs diff=lfs merge=lfs -text
+/Game/ filter=lfs diff=lfs merge=lfs -text
