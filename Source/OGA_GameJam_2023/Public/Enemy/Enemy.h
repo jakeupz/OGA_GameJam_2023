@@ -4,7 +4,6 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
-#include "Interfaces/BulletHitInterface.h"
 #include "Enemy.generated.h"
 
 class UAnimMontage;
@@ -13,7 +12,6 @@ class UPawnSensingComponent;
 UENUM(BlueprintType)
 enum class EEnemyState : uint8
 {
-	EES_Holding UMETA(DisplayName = "Holding"),
 	EES_Patrolling UMETA(DisplayName = "Patrolling"),
 	EES_Chasing UMETA(DisplayName = "Chasing"),
 	EES_Attacking UMETA(DisplayName = "Attacking")
@@ -30,6 +28,8 @@ public:
 	AEnemy();
 	void CheckPatrolTarget();
 	void CheckCombatTarget();
+
+	virtual void PostInitializeComponents() override;
 
 protected:
 	// Called when the game starts or when spawned
@@ -61,7 +61,11 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
-	void Fire(const FVector& HitTarget);
+	UPROPERTY(EditAnywhere)
+		class UBoxComponent* DamageCollision;
+
+	UFUNCTION()
+		void OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& Hit);
 
 //	virtual void BulletHit_Implementation(FHitResult HitResult) override;
 
@@ -75,6 +79,9 @@ private:
 
 	UPROPERTY(VisibleAnywhere)
 		UPawnSensingComponent* PawnSensing;
+
+	UPROPERTY(VisibleAnywhere)
+	class UEnemyCombatComponent* Combat;
 
 /*
 	Patrol mechanics

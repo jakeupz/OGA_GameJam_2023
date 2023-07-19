@@ -9,6 +9,9 @@
 #include "GameFramework/CharacterMovementComponent.h"
 #include "Perception/PawnSensingComponent.h"
 #include "Particles/ParticleSystemComponent.h"
+#include "Enemy/Components/EnemyCombatComponent.h"
+#include "Components/BoxComponent.h"
+#include "Character/PlayerCharacter.h"
 
 
 // Sets default values
@@ -25,6 +28,32 @@ AEnemy::AEnemy()
 	PawnSensing = CreateDefaultSubobject<UPawnSensingComponent>(TEXT("PawnSensing"));
 	PawnSensing->SightRadius = 4000.f;
 	PawnSensing->SetPeripheralVisionAngle(45.f);
+
+	DamageCollision = CreateDefaultSubobject<UBoxComponent>(TEXT("Damage Collision"));
+	DamageCollision->SetupAttachment(RootComponent);
+
+	Combat = CreateDefaultSubobject<UEnemyCombatComponent>(TEXT("EnemyCombatComponent"));
+}
+
+// Called when the game starts or when spawned
+void AEnemy::BeginPlay()
+{
+	Super::BeginPlay();
+
+	OnTakeAnyDamage.AddDynamic(this, &AEnemy::ReceiveDamage);
+
+	EnemyController = Cast<AAIController>(GetController());
+	MoveToTarget(PatrolTarget);
+}
+
+void AEnemy::PostInitializeComponents()
+{
+	Super::PostInitializeComponents();
+
+	if (Combat)
+	{
+		Combat->Enemy = this;
+	}
 }
 
 void AEnemy::PatrolTimerFinished()
@@ -38,18 +67,7 @@ void AEnemy::PatrolTimerFinished()
 	}
 }
 
-// Called when the game starts or when spawned
-void AEnemy::BeginPlay()
-{
-	Super::BeginPlay();
-
-	OnTakeAnyDamage.AddDynamic(this, &AEnemy::ReceiveDamage);
-
-	EnemyController = Cast<AAIController>(GetController());
-	MoveToTarget(PatrolTarget);
-	
-}
-
+// Check if target is in range
 bool AEnemy::InTargetRange(AActor* Target, double Radius)
 {
 	if (Target == nullptr) return false;
@@ -57,7 +75,7 @@ bool AEnemy::InTargetRange(AActor* Target, double Radius)
 	return DistanceToTarget <= Radius;
 }
 
-
+// Move to target
 void AEnemy::MoveToTarget(AActor* Target)
 {
 	if (EnemyController == nullptr || Target == nullptr) return;
@@ -67,6 +85,7 @@ void AEnemy::MoveToTarget(AActor* Target)
 	EnemyController->MoveTo(MoveRequest);
 }
 
+// Will randomly choose different patrol routes
 AActor* AEnemy::ChoosePatrolTarget()
 {
 	TArray<AActor*> ValidTargets;
@@ -87,19 +106,16 @@ AActor* AEnemy::ChoosePatrolTarget()
 	return nullptr;
 }
 
+// Ded
 void AEnemy::Die()
 {
 	Destroy();
 }
 
+// If enemy can find the player in range of sight cone, do action
 void AEnemy::PawnSeen(APawn* SeenPawn)
 {
 	if (EnemyState == EEnemyState::EES_Chasing) return;
-
-	if (EnemyState == EEnemyState::EES_Holding)
-	{
-
-	};
 
 	if (SeenPawn->ActorHasTag(FName("PlayerCharacter")))
 	{
@@ -135,6 +151,11 @@ void AEnemy::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 
+}
+
+void AEnemy::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& Hit)
+{
+	UGameplayStatics::ApplyDamage(OtherActor, Damage, OwnerController, this, UDamageType::StaticClass());
 }
 
 UFUNCTION()

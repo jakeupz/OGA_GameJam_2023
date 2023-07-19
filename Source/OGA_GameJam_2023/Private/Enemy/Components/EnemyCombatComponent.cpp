@@ -2,33 +2,69 @@
 
 
 #include "Enemy/Components/EnemyCombatComponent.h"
+#include "Enemy/Enemy.h"
+#include "Character/PlayerCharacter.h"
+#include "Kismet/GameplayStatics.h"
 
-// Sets default values for this component's properties
 UEnemyCombatComponent::UEnemyCombatComponent()
 {
-	// Set this component to be initialized when the game starts, and to be ticked every frame.  You can turn these features
-	// off to improve performance if you don't need them.
 	PrimaryComponentTick.bCanEverTick = true;
 
-	// ...
 }
 
-
-// Called when the game starts
 void UEnemyCombatComponent::BeginPlay()
 {
 	Super::BeginPlay();
 
-	// ...
 	
 }
 
-
-// Called every frame
 void UEnemyCombatComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
-	// ...
 }
 
+void UEnemyCombatComponent::Fire()
+{
+	if (bCanFire)
+	{
+		bCanFire = false;
+		FHitResult HitResult;
+		TraceUnderCrosshairs(HitResult);
+	}
+}
+
+void UEnemyCombatComponent::TraceUnderCrosshairs(FHitResult& TraceHitResult)
+{
+	FVector Start = Enemy->GetActorLocation();
+
+	Player = UGameplayStatics::GetPlayerCharacter(GetWorld(), 0);
+
+	FVector End = Start + Player->GetActorLocation() * TRACE_LENGTH;
+
+	GetWorld()->LineTraceSingleByChannel(
+		TraceHitResult,
+		Start,
+		End,
+		ECollisionChannel::ECC_Visibility
+	);
+}
+
+void UEnemyCombatComponent::StartFireTimer()
+{
+	if (Enemy == nullptr) return;
+	Enemy->GetWorldTimerManager().SetTimer(
+		FireTimer,
+		this,
+		&UEnemyCombatComponent::FireTimerFinished,
+		FireDelay
+	);
+}
+
+void UEnemyCombatComponent::FireTimerFinished()
+{
+	if (Enemy == nullptr) return;
+	bCanFire = true;
+	Fire();
+}

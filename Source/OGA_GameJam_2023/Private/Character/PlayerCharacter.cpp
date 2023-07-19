@@ -191,7 +191,6 @@ void APlayerCharacter::AimButtonReleased()
 	}
 }
 
-
 void APlayerCharacter::AimOffset(float DeltaTime)
 {
 	if (Combat && Combat->EquippedWeapon == nullptr) return;
