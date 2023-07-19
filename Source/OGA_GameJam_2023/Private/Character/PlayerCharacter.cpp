@@ -92,7 +92,6 @@ void APlayerCharacter::PostInitializeComponents()
 	}
 }
 
-
 void APlayerCharacter::PlayFireMontage(bool bAiming)
 {
 	if (Combat == nullptr || Combat->EquippedWeapon == nullptr) return;
@@ -174,7 +173,6 @@ void APlayerCharacter::CrouchButtonPressed()
 			Crouch();
 		}
 	}
-
 }
 
 void APlayerCharacter::AimButtonPressed()

@@ -7,7 +7,6 @@
 void AProjectileBullet::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit)
 {
 	ACharacter* OwnerCharacter = Cast<ACharacter>(GetOwner());
-	APawn* PawnActor = Cast<APawn>(GetOwner());
 
 	if (OwnerCharacter)
 	{
@@ -16,15 +15,14 @@ void AProjectileBullet::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, 
 		{
 			UGameplayStatics::ApplyDamage(OtherActor, Damage, OwnerController, this, UDamageType::StaticClass());
 		}
-	}
-
-	if (PawnActor)
-	{
-		AController* PawnController = PawnActor->Controller;
-		if (PawnController)
+		else
 		{
-			UGameplayStatics::ApplyDamage(OtherActor, Damage, PawnController, this, UDamageType::StaticClass());
+			GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, FString::Printf(TEXT("No Controller")));
 		}
+	}
+	else
+	{
+		GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, FString::Printf(TEXT("No Owner")));
 	}
 
 	Super::OnHit(HitComp, OtherActor, OtherComp, NormalImpulse, Hit);

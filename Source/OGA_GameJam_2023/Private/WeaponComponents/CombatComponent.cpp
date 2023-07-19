@@ -67,7 +67,6 @@ void UCombatComponent::Fire()
 	if (bCanFire)
 	{
 		bCanFire = false;
-		GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("bCanFire set false!"));
 		FHitResult HitResult;
 		TraceUnderCrosshairs(HitResult);
 		Character->PlayFireMontage(bAiming);
@@ -96,7 +95,6 @@ void UCombatComponent::FireTimerFinished()
 {
 	if (EquippedWeapon == nullptr) return;
 	bCanFire = true;
-	GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("bCanFire set true!"));
 	if (bFireButtonPressed && EquippedWeapon->bAutomatic)
 	{
 		Fire();
