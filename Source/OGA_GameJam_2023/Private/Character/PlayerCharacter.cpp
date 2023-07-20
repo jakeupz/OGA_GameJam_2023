@@ -124,6 +124,10 @@ void APlayerCharacter::ReceiveDamage(AActor* DamagedActor, float Damage, const U
 	Health = FMath::Clamp(Health - Damage, 0.f, MaxHealth);
 	UpdateHUDHealth();
 	PlayHitReactMontage();
+	if (Health <= 0)
+	{
+		Destroy();
+	}
 }
 
 void APlayerCharacter::Move(const FInputActionValue& Value)
