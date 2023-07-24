@@ -101,16 +101,6 @@ private:
 		class UAnimMontage* HitReactMontage;
 
 
-	/**
-	* Player health
-	*/
-
-	UPROPERTY(EditAnywhere, Category = "Player Stats")
-		float MaxHealth = 100.f;
-
-	UPROPERTY(VisibleAnywhere, Category = "Player Stats")
-		float Health = 100.f;
-
 	class APlayerCharacterController* PlayerCharacterController;
 
 public:
@@ -130,4 +120,14 @@ public:
 		float RightHandRotationYaw = 2.f;
 	UPROPERTY(EditAnywhere, Category = "Weapon Rotation Correction")
 		float RightHandRotationPitch = 95.f;
+
+	/**
+	* Player health
+	*/
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Player Stats")
+		float MaxHealth = 100.f;
+
+	UPROPERTY(BlueprintReadWrite, VisibleAnywhere, Category = "Player Stats")
+		float Health = 100.f;
 };

@@ -15,9 +15,9 @@ class OGA_GAMEJAM_2023_API UCharacterOverlay : public UUserWidget
 	GENERATED_BODY()
 public:
 
-	UPROPERTY(meta = (BindWidget))
+	UPROPERTY(BlueprintReadWrite, meta = (BindWidget))
 		class UProgressBar* HealthBar;
 
-	UPROPERTY(meta = (BindWidget))
+	UPROPERTY(BlueprintReadWrite, meta = (BindWidget))
 		class UTextBlock* HealthText;
 };

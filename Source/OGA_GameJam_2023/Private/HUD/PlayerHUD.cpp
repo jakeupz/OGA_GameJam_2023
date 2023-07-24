@@ -9,7 +9,7 @@ void APlayerHUD::BeginPlay()
 {
 	Super::BeginPlay();
 
-	AddCharacterOverlay();
+//	AddCharacterOverlay();
 }
 
 
