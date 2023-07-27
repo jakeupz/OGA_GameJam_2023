@@ -5,15 +5,6 @@ DJ Battle: Rhythm Bullet Hell
 Description
 
 DJ Battle: Rhythm Bullet Hell is an action-packed music-themed game developed in Unreal Engine 5 for OpenGameArt's Summer Game Jam 2023. Step into the shoes of a DJ armed with a futuristic "Synthgun" that shoots waves of different types, including saw, sine, triangle, and square waves (We were undecided on this aspect but you get the idea). Engage in a bullet hell FPS experience where the trajectory of your waves is determined by how "wavy" you choose to make them. Make use of different waveforms with unique effects to defeat enemies and entertain the crowd to maximize the hype meter.
-Table of Contents (Optional)
-
-    Description
-    Features
-    Installation
-    Controls
-    Gameplay Mechanics
-    Contributing
-    License
 
 Features
 
